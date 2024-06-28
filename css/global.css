@@ -434,11 +434,26 @@ body {
   100% {opacity: 1; transform: scale(1); transform-origin: center;}
 }
 
+/* Atomic Classes */
 .primary-5 {color: var(--primary-5);}
+
+.bg-primary-0 { background-color: var(--primary-0) }
+.bg-primary-1 { background-color: var(--primary-1) }
+.bg-primary-2 { background-color: var(--primary-2) }
+.bg-primary-3 { background-color: var(--primary-3) }
+.bg-primary-4 { background-color: var(--primary-4) }
 .bg-primary-5 {
   background-color: var(--primary-5);
   color: var(--white)
 }
+
+.br-xxs { border-radius: var(--xxs) }
+.br-xs { border-radius: var(--xs) }
+.br-xs { border-radius: var(--s) }
+.br-m { border-radius: var(--m) }
+.br-l { border-radius: var(--l) }
+.br-xl { border-radius: var(--xl) }
+.br-xxl { border-radius: var(--xxl) }
 
 .inline-bento {
   display: inline-flex;
@@ -452,10 +467,10 @@ body {
 
 .overline {
   text-transform: uppercase;
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 1.25rem;;
+  font-size: 1.15rem;
+  letter-spacing: 0.05rem;
   line-height: 110%;
   text-transform: uppercase;
 }
@@ -510,6 +525,10 @@ body {
   fill: currentColor;
 }
 
+.text-link {
+  color: var(--primary-5);
+}
+
 .footer-link {
   text-decoration: none;
   color: inherit;
@@ -519,11 +538,41 @@ body {
   color: var(--white)
 }
 
+.image-link {
+  overflow: hidden;
+  border-radius: var(--xs);
+}
+
+.image-link img {
+  transition: transform 0.2s;
+}
+
+.image-link:hover img {
+  transform: scale(1.05);
+}
+
+/* ### IMAGE ### */
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.block-image {
+  display: block;
+  border-radius: var(--br-xs);
+}
 
 /* Logo */
 .logo {
   max-width: 100%;
   height: 1.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.trust-logo {
+  max-width: 100%;
+  height: var(--l);
   width: auto;
   object-fit: contain;
 }
@@ -535,4 +584,16 @@ body {
   50%{ background-color: var(--secondary-4); }
   60%{ background-color: var(--secondary-5); }
   100%{ background-color: var(--secondary-5); }
+}
+
+@keyframes bounce {
+  0%{ transform: translateY(0); }
+  40%{ transform: translateY(0); }
+  50% { transform: translateY(-0.15rem); }
+  60%{ transform: translateY(0); }
+  100%{ transform: translateY(0); }
+}
+
+.bounce {
+  animation: bounce both infinite 4s ease-in-out;
 }

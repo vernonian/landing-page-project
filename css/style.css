@@ -80,6 +80,18 @@ header {
   background: linear-gradient(90deg, #EBF0EB 0%, rgba(235, 240, 235, 0.9) 39%, rgba(235, 240, 235, 0) 83%);
 }
 
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s);
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* Footer */
 
 #footer {
