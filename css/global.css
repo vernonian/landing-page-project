@@ -6,6 +6,8 @@
 body {
   color: var(--textcolor-body);
   background-color: var(--white);
+  padding: 0px;
+  margin: 0px;
 }
 
 a {
@@ -60,16 +62,17 @@ p, ol, ul, blockquote {
   --primary-9: #0a150b;
   
   /* Secondary */
-  --secondary-0: #e9ecec;
-  --secondary-1: #d3dad9;
-  --secondary-2: #a7b4b3;
-  --secondary-3: #7c8f8e;
-  --secondary-4: #506968;
-  --secondary-5: #244442;
-  --secondary-6: #1d3635;
-  --secondary-7: #162928;
-  --secondary-8: #0e1b1a;
-  --secondary-9: #070e0d;
+  --secondary-0: #e7f7ee;
+  --secondary-1: #cff0de;
+  --secondary-2: #9ee0bd;
+  --secondary-3: #6ed19b;
+  --secondary-4: #3dc17a;
+  --secondary-5: #0DB259;
+  --secondary-6: #0a8e47;
+  --secondary-7: #086b35;
+  --secondary-8: #054724;
+  --secondary-9: #032412;
+  
 }
 
 /* =============================================================== */
@@ -87,7 +90,7 @@ p, ol, ul, blockquote {
   --zero: 0px;
 
   /* Padding for element types */
-  --padding-section: 1rem;
+  --padding-section: var(--xl) 5vw;
   --padding-inline: var(--xs) var(--s);
 
   /* Border Units */
@@ -115,6 +118,9 @@ p, ol, ul, blockquote {
 
   --maxwidth-page: 72rem;
   --maxwidth-content: 720px;
+  --content-wide: 1440px;
+  --content-regular: 1200px;
+  --content-thin: 650px;
 
   /* Time units */
   --time-l: 0.4s;
@@ -141,7 +147,7 @@ p, ol, ul, blockquote {
 /* #=#=# TYPOGRAPHY #=#=# */
 :root {
   --fontfamily-serif: serif;
-  --fontfamily-sans: "Source Sans Pro", sans-serif;
+  --fontfamily-sans: "Source Sans 3", sans-serif;
   --fontfamily-mono: monospace;
 
   --lineheight-heading: 1.1;
@@ -168,8 +174,9 @@ body {
 
 /* Display styles */
 .display-1, .display-2, .display-3 {
+  font-family: var(--fontfamily-sans);
   line-height: var(--lineheight-heading);
-  font-weight: 500;
+  font-weight: bold;
   color: var(--textcolor-heading);
 }
 
@@ -321,7 +328,8 @@ body {
 /* Content wrappers */
 .main-wrap,
 .section-wrap,
-.content-wrap {
+.content-wrap,
+.content-thin {
   display: flex;
   flex-direction: column;
   gap: var(--m);
@@ -346,8 +354,13 @@ body {
 }
 
 .content-wrap {
-    max-width: var(--maxwidth-content);
+    max-width: var(--content-regular);
     margin: 0 auto;
+}
+
+.content-thin {
+  max-width: var(--content-thin);
+  margin: 0 auto;
 }
 
 /* List wrappers */
@@ -419,4 +432,107 @@ body {
 @keyframes fadeInOnLoadAnimation {
   0% {opacity: 0; transform: scale(0.97); transform-origin: center;}
   100% {opacity: 1; transform: scale(1); transform-origin: center;}
+}
+
+.primary-5 {color: var(--primary-5);}
+.bg-primary-5 {
+  background-color: var(--primary-5);
+  color: var(--white)
+}
+
+.inline-bento {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: var(--s);
+  padding: var(--xs) var(--s);
+  border-radius: var(--xxs);
+}
+
+.overline {
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+
+/* === Icons === */
+
+.icon-s {
+  max-width: 100%;
+  width: var(--s);
+  height: var(--s);
+  object-fit: contain;
+}
+
+.icon-m {
+  max-width: 100%;
+  width: var(--m);
+  height: var(--m);
+  object-fit: contain;
+}
+
+
+/* ### Button Link ### */
+.button-link {
+  background-color: var(--secondary-5);
+  color: var(--white);
+  font-size: 1.2rem;
+  line-height: 1.1;
+  transition: all 0.2s;
+  text-decoration: none;
+  padding: var(--m);
+  border-radius: var(--xs);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: var(--s);
+  box-shadow: 0px var(--xs) var(--xs) rgba(30, 30, 30, 0.1), 0px 0px var(--xs) rgba(30, 30, 30, 0.1);
+  animation: attentionSeeker both infinite 5s ease-in-out;
+}
+
+.button-link:hover {
+  background-color: var(--secondary-6);
+  color: var(--white);
+  text-decoration: none;
+  transform: scale(1.02);
+  animation: none;
+}
+
+.button-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-link {
+  color: var(--white)
+}
+
+
+/* Logo */
+.logo {
+  max-width: 100%;
+  height: 1.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes attentionSeeker {
+  0%{ background-color: var(--secondary-5); }
+  40% { background-color: var(--secondary-5); }
+  50%{ background-color: var(--secondary-4); }
+  60%{ background-color: var(--secondary-5); }
+  100%{ background-color: var(--secondary-5); }
 }
