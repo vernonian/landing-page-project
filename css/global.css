@@ -1,4 +1,9 @@
 /* #=#=# RESET #=#=# */
+
+html {
+  scroll-behavior: smooth;
+}
+
 * { 
   box-sizing: border-box; 
 } 
@@ -168,7 +173,7 @@ p, article, ul, ol {
 }
 body {
   font-family: var(--fontfamily-sans);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--textcolor-body);
 }
 
@@ -191,15 +196,15 @@ body {
   color: var(--textcolor-heading);
 }
 
-.heading-1, .heading-2, .heading-3 {font-weight: 600;}
-.heading-4, .heading-5, .heading-6 {font-weight: 500;}
+.heading-1, .heading-2, .heading-3 {font-weight: bold;}
+.heading-4, .heading-5, .heading-6 {font-weight: bold;}
 
-.heading-1, .h1 {font-size: 2rem;}
-.heading-2, .h2 {font-size: 1.75rem;}
-.heading-3, .h3 {font-size: 1.5rem;}
-.heading-4, .h4 {font-size: 1.25rem;}
-.heading-5, .h5 {font-size: 1rem;}
-.heading-6, .h6 {font-size: 0.75rem;}
+.heading-1, .h1 {font-size: 2.5rem;}
+.heading-2, .h2 {font-size: 2rem;}
+.heading-3, .h3 {font-size: 1.75rem;}
+.heading-4, .h4 {font-size: 1.5rem;}
+.heading-5, .h5 {font-size: 1.25rem;}
+.heading-6, .h6 {font-size: 1.15rem;}
 
 .heading-5, .heading-6 {
   text-transform: uppercase;
@@ -212,10 +217,10 @@ body {
   font-weight: var(--fontweight-r);
 }
 
-.body-l {font-size: 1.125rem;}
-.body-m {font-size: 1rem;}
-.body-s {font-size: 0.83rem;}
-.body-xs {font-size: 0.69rem}
+.body-l {font-size: 1.35rem;}
+.body-m {font-size: 1.2rem;}
+.body-s {font-size: 1rem;}
+.body-xs {font-size: 0.8rem}
 
 @media screen and (max-width: 768px) {
   .display-1 {font-size: 3.815rem;}
@@ -332,7 +337,7 @@ body {
 .content-thin {
   display: flex;
   flex-direction: column;
-  gap: var(--m);
+  gap: var(--xl);
   width: 100%;
 }
 
@@ -504,8 +509,11 @@ body {
   padding: var(--m);
   border-radius: var(--xs);
   width: max-content;
+  min-width: 220px;
   display: flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
   gap: var(--s);
   box-shadow: 0px var(--xs) var(--xs) rgba(30, 30, 30, 0.1), 0px 0px var(--xs) rgba(30, 30, 30, 0.1);
   animation: attentionSeeker both infinite 5s ease-in-out;
@@ -517,6 +525,10 @@ body {
   text-decoration: none;
   transform: scale(1.02);
   animation: none;
+}
+
+.button-link.fullwidth {
+  width: 100%;
 }
 
 .button-link svg {
@@ -560,6 +572,7 @@ img {
 .block-image {
   display: block;
   border-radius: var(--br-xs);
+  margin-bottom: var(--s); 
 }
 
 /* Logo */
