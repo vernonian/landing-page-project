@@ -218,9 +218,9 @@ body {
 .body-xs {font-size: 0.8rem}
 
 @media screen and (max-width: 768px) {
-  .display-1 {font-size: 3.815rem;}
-  .display-2 {font-size: 3.052rem;}
-  .display-3 {font-size: 2.441rem;}
+  .display-1 {font-size: 3.5rem;}
+  .display-2 {font-size: 3rem;}
+  .display-3 {font-size: 2.5rem;}
 
   .heading-1, .h1 {font-size: 2.027rem;}
   .heading-2, .h2 {font-size: 1.802rem;}
@@ -502,7 +502,9 @@ body {
   background-color: var(--secondary-5);
   color: var(--white);
   font-size: 1.2rem;
+  font-weight: bold;;
   line-height: 1.1;
+  letter-spacing: 0.5px;
   transition: all 0.2s;
   text-decoration: none;
   padding: var(--m);
@@ -518,7 +520,7 @@ body {
   animation: attentionSeeker both infinite 5s ease-in-out;
 }
 
-.button-link:hover {
+.button-link:hover, .button-link-s:hover {
   background-color: var(--secondary-6);
   color: var(--white);
   text-decoration: none;
@@ -598,9 +600,9 @@ img {
 /* Animation */
 @keyframes attentionSeeker {
   0%{ background-color: var(--secondary-5); }
-  40% { background-color: var(--secondary-5); }
-  50%{ background-color: var(--secondary-4); }
-  60%{ background-color: var(--secondary-5); }
+  40% { background-color: var(--secondary-5); transform: scale(1); }
+  50%{ background-color: var(--secondary-4); transform: scale(1.02); }
+  60%{ background-color: var(--secondary-5); transform: scale(1); }
   100%{ background-color: var(--secondary-5); }
 }
 
