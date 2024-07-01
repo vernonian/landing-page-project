@@ -218,7 +218,6 @@ header {
   padding: var(--m);
   top: 0;
   bottom: 0;
-  width: 65px;
   background: #ffffe2;
   border: 1px dashed #c66b51;
   border-radius: 0 var(--xs) var(--xs) 0;
