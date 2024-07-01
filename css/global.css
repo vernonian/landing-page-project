@@ -524,7 +524,7 @@ body {
   background-color: var(--secondary-6);
   color: var(--white);
   text-decoration: none;
-  transform: scale(1.02);
+  transform: translateY(-2px);
   animation: none;
 }
 
@@ -600,9 +600,9 @@ img {
 /* Animation */
 @keyframes attentionSeeker {
   0%{ background-color: var(--secondary-5); }
-  40% { background-color: var(--secondary-5); transform: scale(1); }
-  50%{ background-color: var(--secondary-4); transform: scale(1.02); }
-  60%{ background-color: var(--secondary-5); transform: scale(1); }
+  40% { background-color: var(--secondary-5); }
+  50%{ background-color: var(--secondary-4); }
+  60%{ background-color: var(--secondary-5); }
   100%{ background-color: var(--secondary-5); }
 }
 
